@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFd-od-h8j">
+                                <rect key="frame" x="144" y="540" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kct-dh-4pe">
+                                <rect key="frame" x="171" y="479" width="174" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="mqU-sO-4ca"/>
+                                </connections>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ih5-y5-Wci">
+                                <rect key="frame" x="82" y="400" width="211" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dLB-hN-g7U"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-pe-fdy">
+                                <rect key="frame" x="141" y="347" width="92" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jJS-vt-ggD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount: $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdg-if-smx">
+                                <rect key="frame" x="61" y="484" width="110" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Eiv-uZ-xwi"/>
+                                    <constraint firstAttribute="width" constant="110" id="xQo-BO-h86"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter bill amount" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="cJx-6c-f3f">
+                                <rect key="frame" x="112" y="78" width="150" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cJx-6c-f3f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="46T-C9-x3X"/>
+                            <constraint firstItem="hdg-if-smx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="5ZH-zX-dWi"/>
+                            <constraint firstItem="RFd-od-h8j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="6Kk-uJ-fKW"/>
+                            <constraint firstItem="NEg-pe-fdy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="8b9-eC-D2j"/>
+                            <constraint firstItem="hdg-if-smx" firstAttribute="centerY" secondItem="kct-dh-4pe" secondAttribute="centerY" id="BFk-Gy-w6n"/>
+                            <constraint firstItem="RFd-od-h8j" firstAttribute="top" secondItem="hdg-if-smx" secondAttribute="bottom" constant="35" id="BHf-y3-nSR"/>
+                            <constraint firstItem="cJx-6c-f3f" firstAttribute="centerX" secondItem="NEg-pe-fdy" secondAttribute="centerX" id="ByT-Jd-uUd"/>
+                            <constraint firstItem="kct-dh-4pe" firstAttribute="leading" secondItem="hdg-if-smx" secondAttribute="trailing" id="H7z-9d-PXf"/>
+                            <constraint firstItem="cJx-6c-f3f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="JOG-4D-RX9"/>
+                            <constraint firstItem="ih5-y5-Wci" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="T83-kH-NAY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kct-dh-4pe" secondAttribute="trailing" constant="30" id="Tl7-zv-zqj"/>
+                            <constraint firstItem="RFd-od-h8j" firstAttribute="top" secondItem="kct-dh-4pe" secondAttribute="bottom" constant="31" id="kZB-5M-8m1"/>
+                            <constraint firstItem="ih5-y5-Wci" firstAttribute="top" secondItem="NEg-pe-fdy" secondAttribute="bottom" constant="32" id="lNz-gg-1Yi"/>
+                            <constraint firstItem="kct-dh-4pe" firstAttribute="top" secondItem="ih5-y5-Wci" secondAttribute="bottom" constant="49" id="oWh-Hl-2zz"/>
+                            <constraint firstItem="NEg-pe-fdy" firstAttribute="centerX" secondItem="ih5-y5-Wci" secondAttribute="centerX" id="qRe-aJ-NEI"/>
+                            <constraint firstItem="cJx-6c-f3f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wCR-me-KuZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RFd-od-h8j" secondAttribute="bottom" constant="106" id="xLV-Bw-bvd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelBill" destination="RFd-od-h8j" id="YO8-yg-Yiq"/>
+                        <outlet property="labelTipPercent" destination="NEg-pe-fdy" id="Idh-Cp-ONz"/>
+                        <outlet property="sliderTip" destination="ih5-y5-Wci" id="B6C-DW-sLX"/>
+                        <outlet property="textFieldBill" destination="cJx-6c-f3f" id="Vg0-FT-d5l"/>
+                        <outlet property="textFieldTip" destination="kct-dh-4pe" id="pGG-7b-Fqz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
